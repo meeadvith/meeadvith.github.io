@@ -87,18 +87,20 @@ body{
 	right: 25px;
 	bottom: 130px;
 }
-#about{
-	height: 85%;
-	width: 60%;
-	position: absolute;
+#aboutBox {
+	display: flex;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	text-align:center;
+	border-style: double;
+	border-radius: 10px;
+	border-width: 5px;
+	border-color: skyblue;
 }
-#aboutBox div{
-	border: 2px;
-	border-radius: 2px;
-	border-color:cadetblue;
+#aboutBox div {
+	display: inline-block;
 	width: 33%;
+	text-align: center;
+	border: solid 1px;
 }
