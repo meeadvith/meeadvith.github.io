@@ -1,0 +1,103 @@
+body{
+	background-image: url("background.jpg");
+	background-color: rgb(20, 20, 33);
+}
+.btnbar button{
+	color: slategray;
+	background-image:linear-gradient(to bottom, DarkSlateGray, rgb(20, 20, 33), Black);
+	font-size: 22px;
+	width:24%;
+	border-radius: 5px;
+}
+.btnbar{
+	padding-bottom: 5px;
+}
+#mail button{
+	position: fixed;
+	top: 50px;
+	height: 40px;
+	width: 55px;
+	color: white;
+	background-image: url("https://img.icons8.com/papercut/60/new-post.png" );
+	background-size: 60px;
+	background-position: center;
+}
+#linkedin button{
+	border-color: black;
+	position: fixed;
+	top: 100px;
+	border-radius: 8px;
+	height: 39px;
+	width: 40px;
+	background-image: url("https://img.icons8.com/fluency/48/linkedin.png");
+	background-position: center;
+}
+#mail a{
+	position: fixed;
+	top: 60px;
+	left: 70px;
+	color: white;
+	display: none;
+}
+#linkedin a{
+	position: fixed;
+	top: 110px;
+	left: 55px;
+	color: white;
+	display: none;
+}
+#mail div{
+	background-color: lightblue;
+	position: fixed;
+	top: 57px;
+	left: 30px;
+	width: 250px;
+	height: 25px;
+	display: none;
+	border-radius: 15px;
+}
+#linkedin div{
+	background-color: lightblue;
+	position: fixed;
+	top: 107px;
+	left: 10px;
+	width: 340px;
+	height: 25px;
+	display: none;
+	border-radius: 15px;
+}
+#photo{
+	position: fixed;
+	width: 500px;
+	height: 500px;
+	right: -160px;
+	bottom: -60px;
+}
+#game{
+	position: fixed;
+	height: 500px;
+	width: 900px;
+	top: 50px;
+	left: 100px;
+	display: none;
+}
+#timer{
+	position: fixed;
+	font-size: 35px;
+	right: 25px;
+	bottom: 130px;
+}
+#about{
+	height: 85%;
+	width: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#aboutBox div{
+	border: 2px;
+	border-radius: 2px;
+	border-color:cadetblue;
+	width: 33%;
+}
