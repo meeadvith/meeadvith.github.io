@@ -7,6 +7,7 @@ var linkedinb = document.querySelector('#linkedin a');
 var linkedinbb= document.querySelector('#linkedin div');
 var gamescreen = document.querySelector('#game');
 var timer = document.querySelector('#timer');
+var about = document.querySelector('#aboutBox');
 
 // btn bar
 for (var i=0; i<btnbar.length; i++){
@@ -28,11 +29,18 @@ for (var i=0; i<btnbar.length; i++){
 		this.style.borderRadius = '5px';
 	}
 	btnbar[i].onclick = function clicked(){
-		if (this.innerHTML=="Games"){
-			gamescreen.src= 'https://www.twoplayergames.org/game/two-ball-3d';
-			gamescreen.style.display= 'block';
+		if (this.innerHTML == "Games") {
+			gamescreen.src = 'https://www.twoplayergames.org/game/two-ball-3d';
+			gamescreen.style.display = 'block';
+			about.style.display = 'none';
+
 		}
-		else{ gamescreen.style.display= 'none'; gamescreen.src= '';}
+		else {
+			gamescreen.style.display = 'none';
+			gamescreen.src = '';
+			about.style.display = 'block';
+			about.style.display = 'flex';
+		}
 	}
 }
 
@@ -59,9 +67,12 @@ linkedin.onmouseout= function mailLeave(){
 	linkedinbb.style.display= 'none';	
 }
 //timer
-timer.onmousedown= function timerStart(){
+timer.onmousedown = function timerStart() {
+	if (timer.innerText != 'START') {
+		return;
+	}
 	timer.innerText= '5:00';
-	timer.style.right= '50px';
+	timer.style.left= '20px';
 	var count = 0;
 	var interval = setInterval(function(){
 		mins= (Math.floor((300-count) /60)).toString();

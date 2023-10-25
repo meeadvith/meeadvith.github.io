@@ -68,24 +68,26 @@ body{
 }
 #photo{
 	position: fixed;
-	width: 500px;
-	height: 500px;
-	right: -160px;
-	bottom: -60px;
+	width: 200px;
+	height: 200px;
+	left: -60px;
+	bottom: -20px;
 }
 #game{
 	position: fixed;
 	height: 500px;
 	width: 900px;
-	top: 50px;
-	left: 100px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	display: none;
 }
 #timer{
 	position: fixed;
-	font-size: 35px;
-	right: 25px;
-	bottom: 130px;
+	font-size: 25px;
+	font-weight: 900;
+	left: 10px;
+	bottom: 60px;
 }
 #aboutBox {
 	display: flex;
