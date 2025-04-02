@@ -42,7 +42,7 @@ for (var i=0; i<btnbar.length; i++){
 		}
 		
 		if (this.innerHTML == "Progress") {
-			window.location.href = "DayTracker.html";
+			window.location.href = "/DayTracker/";
 		}
 	}
 }
