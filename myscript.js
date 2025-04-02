@@ -33,7 +33,6 @@ for (var i=0; i<btnbar.length; i++){
 			gamescreen.src = 'https://www.twoplayergames.org/game/two-ball-3d';
 			gamescreen.style.display = 'block';
 			about.style.display = 'none';
-
 		}
 		else {
 			gamescreen.style.display = 'none';
@@ -41,30 +40,20 @@ for (var i=0; i<btnbar.length; i++){
 			about.style.display = 'block';
 			about.style.display = 'flex';
 		}
+		
+		if (this.innerHTML == "Progress") {
+			window.location.href = "DayTracker.html";
+		}
 	}
 }
 
 // mail
-mail.onmouseover= function mailHover() {
-	this.style.borderColor = 'lightblue';
-	mailb.style.display= 'block';
-	mailbb.style.display= 'block';
-}
-mail.onmouseout= function mailLeave(){
-	this.style.borderColor = 'black';
-	mailb.style.display= 'none';
-	mailbb.style.display= 'none';
+mail.onclick = function mailClick() {
+	window.open("mailto:adviththoutu@cmail.carleton.ca");
 }
 // linkedin
-linkedin.onmouseover= function mailHover() {
-	this.style.borderColor = 'lightblue';
-	linkedinb.style.display= 'block';
-	linkedinbb.style.display= 'block';
-}
-linkedin.onmouseout= function mailLeave(){
-	this.style.borderColor = 'black';
-	linkedinb.style.display= 'none';
-	linkedinbb.style.display= 'none';	
+linkedin.onclick = function mailClick() {
+	window.open("https://www.linkedin.com/in/adviththoutu/");
 }
 //timer
 timer.onmousedown = function timerStart() {
