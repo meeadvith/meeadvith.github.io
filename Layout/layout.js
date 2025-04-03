@@ -75,16 +75,16 @@ linkedin.onclick = function mailClick() {
 }
 //timer
 var count = 0
-if (sessionStorage.getItem("timer_running")){
-	count = sessionStorage.getItem("timer_count");
+if (sessionStorage.getItem("timer_running") == "true"){
+	count = parseInt(sessionStorage.getItem("timer_count"));
 	timerStart();
 }
-timer.onmousedown = timerStart();
+timer.onmousedown = timerStart;
 function timerStart() {
 	if (timer.innerText != 'START') {
 		return;
 	}
-	sessionStorage.setItem("timer_running", true);
+	sessionStorage.setItem("timer_running", "true");
 	timer.style.color = "white";
 	timer.innerText= timeFormat();
 	timer.style.left= '20px';
@@ -92,8 +92,10 @@ function timerStart() {
 		timer.innerText= timeFormat();
 		count++;
 		sessionStorage.setItem("timer_count", count);
-		if (count > 300){ 
-			sessionStorage.setItem("timer_running", false);
+		if (count > 300){
+			count = 0;			
+			sessionStorage.setItem("timer_running", "false");
+			sessionStorage.setItem("timer_count", count);
 			timer.style.color = "black";
 			timer.style.right= '25px';
 			timer.innerText= 'START';
@@ -102,8 +104,8 @@ function timerStart() {
 	}, 1000);
 }
 function timeFormat(){
-	mins= (Math.floor((300-count) /60)).toString();
-	secs= ((300-count) % 60).toString();
+	let mins= (Math.floor((300-count) /60)).toString();
+	let secs= ((300-count) % 60).toString();
 	if ( secs.length < 2){
 		secs = '0' + secs;
 	}
