@@ -57,11 +57,15 @@ for (var i=0; i<btnbar.length; i++){
 			params = "time=";
 		}
 		
-		var url;
-		if (this.innerHTML == "Games" && document.title != "Games") {url = "/Games";}		
-		else if (this.innerHTML == "Chronolog" && document.title != "Chronolog") {url = "/Chronolog";}
-		else if (this.innerHTML == "Home" && document.title != "Home") {url = "/";}
-		window.location.href = url;
+		if (this.innerHTML == "Games" && document.title != "Games") {
+			window.location.href = "/Games";
+		}		
+		else if (this.innerHTML == "Chronolog" && document.title != "Chronolog") {
+			window.location.href = "/Chronolog";
+		}
+		else if (this.innerHTML == "Home" && document.title != "Home") {
+			window.location.href = "/";
+		}
 	}
 }
 
