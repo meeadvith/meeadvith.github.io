@@ -1,3 +1,7 @@
+body{
+	background-image: url("/background.jpg");
+	background-color: rgb(44, 156, 240);
+}
 .btnbar button{
 	color: slategray;
 	background-image:linear-gradient(to bottom, DarkSlateGray, rgb(20, 20, 33), Black);
@@ -5,10 +9,15 @@
 	width:24%;
 	border-radius: 5px;
 }
+.btnbar button:hover{
+	color: azure;
+	background-image:linear-gradient(to bottom, SlateGray, DarkSlateGray, rgb(20, 20, 33));
+}
 .btnbar{
 	padding-bottom: 5px;
 }
 #mail button{
+	border-color: black;
 	position: fixed;
 	top: 50px;
 	height: 40px;
@@ -17,6 +26,9 @@
 	background-image: url("https://img.icons8.com/papercut/60/new-post.png" );
 	background-size: 60px;
 	background-position: center;
+}
+#mail button:hover{
+	border-color: white;
 }
 #linkedin button{
 	border-color: black;
@@ -27,6 +39,9 @@
 	width: 40px;
 	background-image: url("https://img.icons8.com/fluency/48/linkedin.png");
 	background-position: center;
+}
+#linkedin button:hover{
+	border-color: white;
 }
 #mail a{
 	position: fixed;
@@ -69,36 +84,22 @@
 	left: -60px;
 	bottom: -20px;
 }
-#game{
-	position: fixed;
-	height: 500px;
-	width: 900px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	display: none;
-}
 #timer{
 	position: fixed;
 	font-size: 25px;
 	font-weight: 900;
 	left: 10px;
 	bottom: 60px;
+	font-color: black;
 }
-#aboutBox {
-	display: flex;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-style: double;
-	border-radius: 10px;
-	border-width: 5px;
-	border-color: skyblue;
+#timer:hover{
+	color: white;
 }
-#aboutBox div {
-	display: inline-block;
-	width: 33%;
-	text-align: center;
-	border: solid 1px;
+#main-content {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding-top: 10px;
 }
