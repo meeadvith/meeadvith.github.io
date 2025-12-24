@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Advith Thoutu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Advith Thoutu</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.pdf" target="_blank" class="btn-resume">Resume</a></li>
+            </ul>
+			
+			<div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Oct 2024 - Dec 2024</div>
+                    <div class="timeline-content">
+                        <h3>Data Analyst (Co-op)</h3>
+                        <h4>Fisheries and Oceans Canada (DFO)</h4>
+                        <ul>
+                            <li>Migrated water level data to a centralized database and automated ingestion using <strong>API-driven workflows</strong>, ensuring data consistency and improving efficiency.</li>
+                            <li>Developed <strong>flag mapping functions</strong> to ensure data reliability while enhancing visualization tools, such as station maps and time-series graphs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2024 - Aug 2024</div>
+                    <div class="timeline-content">
+                        <h3>Web Developer (Co-op)</h3>
+                        <h4>Environment & Climate Change Canada (ECCC)</h4>
+                        <ul>
+                            <li>Developed high-performance algorithms and interactive data management tools for large datasets, significantly <strong>reducing query times</strong> for real-time analysis.</li>
+                            <li>Implemented <strong>user access control</strong> and logging mechanisms, enhancing system security and integrity.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="socials">
+                <a href="https://github.com/meeadvith" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Advith Thoutu</p>
+        </div>
+    </footer>
+	
+	<script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            // Toggle the side menu
+            nav.classList.toggle('nav-active');
+            
+            // Animate the burger icon (turn into X)
+            burger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
