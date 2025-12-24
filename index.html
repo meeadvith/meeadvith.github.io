@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<!-- My website 1.2 -->
-
+<html lang="en">
 <head>
-	<meta http-equiv='cache-control' content='no-cache'> 
-	<meta http-equiv='expires' content='0'> 
-	<meta http-equiv='pragma' content='no-cache'>
-
-	<title>Home</title>
-	<link rel="stylesheet" href="style.css"/>
-	<script src="Layout/layout.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Advith Thoutu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-	<custom-layout></custom-layout>
 
-	<div id="main-content">
-		<div id="aboutBox">
-			<div>
-				<ul>
-					<li>Python</li>
-					<li>C</li>
-					<li>Java</li>
-					<li>MATLAB</li>
-					<li>HTML</li>
-					<li>JavaScript</li>
-					<li>CSS</li>
-				</ul>
-				<ul>
-					<li>Abstract Data Types</li>
-					<li>Object Oriented Programming</li>
-					<li>Unit Testing</li>
-					<li>GUI</li>
-					<li>Memory Management</li>
-					<li>Data Structures</li>
-					<li>Code Documentation</li>
-				</ul>
-			</div>
-			<div><p>Carleton University <br></p>  <p>StartDate: 09/2021 <td>AnticipatedGraduation: 05/2026</p></div>
-			<div><p>Projects</p></div>
-		</div>
-	</div>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Advith Thoutu</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.pdf" target="_blank" class="btn-resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Hi, I'm <span class="highlight">Advith Thoutu</span></h1>
+            <h2>Computer Systems Engineering Student</h2>
+            <p>Versatile Engineer bridging the gap between High-Level Software Architecture and Low-Level System Design. Experienced in building scalable object-oriented applications, distributed network systems, and real-time embedded solutions.</p>
+            
+            <div class="hero-btns">
+                <a href="projects.html" class="btn btn-primary">View My Projects</a>
+                <a href="https://github.com/meeadvith" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="socials">
+                <a href="https://github.com/meeadvith" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Advith Thoutu</p>
+        </div>
+    </footer>
+
 </body>
+</html>

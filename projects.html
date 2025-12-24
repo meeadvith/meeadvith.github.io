@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Advith Thoutu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Advith Thoutu</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.pdf" target="_blank" class="btn-resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-section">
+        <div class="container">
+            <h2 class="section-title">Technical Projects</h2>
+            
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Autonomous Robot Games (Capstone)</h3>
+                        <span class="date">Sep 2024 - Present</span>
+                    </div>
+                    <p class="project-desc">
+                        Engineered a real-time <strong>ROS2 Humble</strong> control architecture for a multi-agent "Invader-Defender" simulation. 
+                        Integrated <strong>OptiTrack</strong> motion capture via UDP for precise closed-loop path following and target tracking.
+                    </p>
+                    <div class="tech-stack">
+                        <span>ROS2</span>
+                        <span>Python</span>
+                        <span>OptiTrack</span>
+                        <span>Control Theory</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Autonomous Snowplow Robot</h3>
+                        <span class="date">Sep 2025 - Dec 2025</span>
+                    </div>
+                    <p class="project-desc">
+                        Designed an autonomous robot in <strong>C++ (Arduino)</strong> to navigate and clear debris from a bounded arena. 
+                        Implemented a <strong>Finite State Machine (FSM)</strong> for decision logic, <strong>Sensor Fusion</strong> (IMU, Ultrasonic, IR) 
+                        for obstacle avoidance, and a <strong>Watchdog Timer</strong> for fail-safe operation.
+                    </p>
+                    <div class="tech-stack">
+                        <span>C++</span>
+                        <span>Arduino</span>
+                        <span>Embedded Systems</span>
+                        <span>Sensor Fusion</span>
+                    </div>
+                    <a href="https://github.com/SYSC4805/project-l2-g2" class="project-link" target="_blank" rel="noopener noreferrer">View Code &rarr;</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>Linux ATM Simulation</h3>
+                        <span class="date">Nov 2023 - Dec 2023</span>
+                    </div>
+                    <p class="project-desc">
+                        Developed a multi-process ATM prototype in <strong>C</strong> using <strong>Inter-Process Communication (IPC)</strong> 
+                        and message queues. Orchestrated concurrent processes for the ATM interface, Database Server, and Editor.
+                    </p>
+                    <div class="tech-stack">
+                        <span>C</span>
+                        <span>Linux IPC</span>
+                        <span>Multithreading</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>MSP432 Embedded Controller</h3>
+                        <span class="date">Sep 2023 - Dec 2023</span>
+                    </div>
+                    <p class="project-desc">
+                        Programmed an <strong>MSP432</strong> microcontroller in Embedded C. Utilized <strong>Interrupt Service Routines (ISRs)</strong> 
+                        and hardware timers to simulate traffic lights and manage real-time joystick inputs.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Embedded C</span>
+                        <span>MSP432</span>
+                        <span>Hardware Interrupts</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>OS Kernel Simulator</h3>
+                        <span class="date">Sep 2023 - Oct 2023</span>
+                    </div>
+                    <p class="project-desc">
+                        Built a dynamic OS scheduler in C implementing <strong>Round Robin</strong> and <strong>Priority</strong> algorithms. 
+                        Designed memory management modules to simulate process lifecycles and partition allocation.
+                    </p>
+                    <div class="tech-stack">
+                        <span>C</span>
+                        <span>Algorithms</span>
+                        <span>Data Structures</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <h3>OOP Game Engine</h3>
+                        <span class="date">Jan 2023 - Apr 2023</span>
+                    </div>
+                    <p class="project-desc">
+                        Architected a Java-based game utilizing <strong>Polymorphism</strong>, <strong>Inheritance</strong>, and 
+                        <strong>Encapsulation</strong>. Documented architecture via detailed <strong>UML</strong> diagrams.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Java</span>
+                        <span>UML</span>
+                        <span>GUI Design</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="socials">
+                <a href="https://github.com/meeadvith" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Advith Thoutu</p>
+        </div>
+    </footer>
+
+</body>
+</html>
