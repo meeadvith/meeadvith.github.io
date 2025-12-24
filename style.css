@@ -1,4 +1,6 @@
-/* --- RESET & GLOBAL VARIABLES --- */
+/* =========================================
+   1. RESET & GLOBAL VARIABLES
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevents horizontal scroll on small screens */
 }
 
 .container {
@@ -31,7 +34,9 @@ ul {
     list-style: none;
 }
 
-/* --- NAVIGATION BAR --- */
+/* =========================================
+   2. NAVIGATION BAR
+   ========================================= */
 .navbar {
     position: sticky;
     top: 0;
@@ -73,6 +78,7 @@ ul {
     font-weight: 700;
 }
 
+/* Resume Button Style */
 .btn-resume {
     background: #007bff;
     color: #fff !important;
@@ -85,7 +91,9 @@ ul {
     background: #0056b3;
 }
 
-/* --- HERO SECTION (Home Page) --- */
+/* =========================================
+   3. HERO SECTION (Home Page)
+   ========================================= */
 .hero {
     flex: 1; /* Pushes footer down */
     display: flex;
@@ -94,6 +102,8 @@ ul {
     text-align: center;
     padding: 50px 20px;
     background: #fff;
+    /* FIX: Use min-height to prevent scrolling issues on mobile */
+    min-height: 60vh; 
 }
 
 .hero h1 {
@@ -131,6 +141,10 @@ ul {
     color: #fff;
 }
 
+.btn-primary:hover {
+    background: #0056b3;
+}
+
 .btn-outline {
     border: 2px solid #007bff;
     color: #007bff;
@@ -141,7 +155,9 @@ ul {
     color: #fff;
 }
 
-/* --- PROJECTS PAGE --- */
+/* =========================================
+   4. PROJECTS & SKILLS SECTIONS
+   ========================================= */
 .page-section {
     padding: 60px 0;
     flex: 1;
@@ -155,6 +171,7 @@ ul {
     position: relative;
 }
 
+/* Underline for titles */
 .section-title::after {
     content: '';
     display: block;
@@ -164,6 +181,7 @@ ul {
     margin: 10px auto 0;
 }
 
+/* Projects Grid Layout */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -231,11 +249,7 @@ ul {
     align-self: flex-start;
 }
 
-.project-link:hover {
-    color: #007bff;
-}
-
-/* --- SKILLS PAGE --- */
+/* Skills Layout */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -265,33 +279,9 @@ ul {
     margin-right: 5px;
 }
 
-/* --- FOOTER --- */
-footer {
-    background: #2c3e50;
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
-    margin-top: auto;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.socials a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 10px;
-}
-
-.socials a:hover {
-    color: #007bff;
-}
-
-/* --- TIMELINE STYLES --- */
+/* =========================================
+   5. EXPERIENCE TIMELINE
+   ========================================= */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -299,7 +289,7 @@ footer {
     padding: 20px 0;
 }
 
-/* The Vertical Line */
+/* Vertical Line */
 .timeline::after {
     content: '';
     position: absolute;
@@ -307,14 +297,14 @@ footer {
     background-color: #e9ecef;
     top: 0;
     bottom: 0;
-    left: 20px; /* Aligned to left for simplicity */
+    left: 20px;
     margin-left: -2px;
 }
 
 .timeline-item {
     position: relative;
     margin-bottom: 50px;
-    padding-left: 60px; /* Space for the line */
+    padding-left: 60px;
 }
 
 /* The Dot */
@@ -326,7 +316,7 @@ footer {
     border: 4px solid #fff;
     border-radius: 50%;
     top: 5px;
-    left: 14px; /* Centers dot on line */
+    left: 14px;
     z-index: 1;
     box-shadow: 0 0 0 2px #007bff;
 }
@@ -378,9 +368,39 @@ footer {
     line-height: 1.5;
 }
 
-/* --- MOBILE NAVIGATION STYLES --- */
+/* =========================================
+   6. FOOTER
+   ========================================= */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: auto;
+}
 
-/* Initially hide the burger on desktop */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.socials a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.socials a:hover {
+    color: #007bff;
+}
+
+/* =========================================
+   7. MOBILE RESPONSIVENESS (The Hamburger)
+   ========================================= */
+
+/* Hide burger by default on desktop */
 .burger {
     display: none;
     cursor: pointer;
@@ -394,54 +414,65 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* SCREEN SIZE: TABLET & PHONE (Max Width 768px) */
+/* Tablet & Phone Styles */
 @media screen and (max-width: 768px) {
     
-    /* Lock horizontal scrolling when menu is open */
-    body {
-        overflow-x: hidden;
+    /* Navigation Link Styles for Mobile */
+    .nav-links {
+        position: fixed; /* FIX: Prevents scrolling issues */
+        right: 0px;
+        height: 100vh;
+        top: 60px; /* Below navbar */
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width drawer */
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+        padding-top: 40px;
+        z-index: 998;
+        overflow-y: auto; /* Allow scroll inside menu if needed */
+        border-top: 1px solid #eee;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        opacity: 1;
     }
 
     .burger {
-        display: block; /* Show burger on mobile */
+        display: block; /* Show burger */
     }
 
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 92vh; /* Takes up most of the screen height */
-        top: 60px;    /* Push it down below the navbar */
-        background-color: #fff;
-        display: flex;
-        flex-direction: column; /* Stack links vertically */
-        align-items: center;
-        width: 60%;   /* Width of the slide-out menu */
-        transform: translateX(100%); /* Start hidden to the right */
-        transition: transform 0.4s ease-in;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        padding-top: 60px;
-        z-index: 999;
-    }
-
-    /* This class is added by JS to show the menu */
+    /* Class added by JS to slide menu in */
     .nav-active {
         transform: translateX(0%);
     }
 
-    /* Spacing for links inside the mobile menu */
-    .nav-links li {
-        margin: 25px 0;
-        opacity: 1;
-    }
-    
-    /* Make the resume button look good in the menu */
+    /* Resume button mobile adjustment */
     .btn-resume {
         width: 100%;
         text-align: center;
-        padding: 12px 30px;
     }
 
-    /* BURGER ANIMATION (Turns into an X) */
+    /* Adjust Hero Text Size */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Timeline Adjustments */
+    .timeline::after {
+        left: 15px;
+    }
+    .timeline-dot {
+        left: 9px;
+    }
+    .timeline-item {
+        padding-left: 45px;
+    }
+
+    /* Burger Animation to X */
     .toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
